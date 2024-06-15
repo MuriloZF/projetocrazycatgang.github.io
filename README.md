@@ -3,7 +3,7 @@ Esse é um site desenvolvido para a Crazy Cat Gang.
 
 <h2> Descrição </h2>
 A Crazy Cat Gang é uma ong de Curitiba que castra, divulga e doa gatinhos abandonados de forma independente.
-O site foi desenvolvido utilizando HTML e CSS. Para receber as informações dos formulários, foi utilizado <a href="https://formspree.io/"> Formspree </a>
+O site foi desenvolvido utilizando HTML e CSS. Para receber as informações dos formulários, foi utilizado a plataforma <a href="https://formspree.io/"> Formspree </a>
 
 <h2> Créditos </h2>
 Esse projeto foi realizado por:
