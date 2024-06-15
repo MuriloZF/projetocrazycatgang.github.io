@@ -29,69 +29,69 @@
     
     <div class="texto"> 
        
-       <br>
-       <text> Nome completo:  </text>
-       <input type="text" placeholder="Nome completo" />
-       <br>
-       <text> Data de nascimento: </text>
-       <input type="text" placeholder="Data de nascimento" />
-       <br>
-       <text> Telefone: </text>
-       <input type="text" placeholder="Telefone" />
-       <br>
-       <text> Email: </text>
-       <input type="text" placeholder="Email" />
-       <br>
-       <text> CPF: </text>
-       <input type="text" placeholder="CPF" />
-       <br>
-       <text> Qual função te interessa? </text>
-       <select>
-        <option> </option>
-        <option> Carona </option>
-        <option> Organização de Eventos </option>
-        <option> Participação de Eventos </option>
-        <option> Fotografia </option>
-        <option> Edição Gráfica </option>
-        <option> Edição de Vídeos </option>
-        <option> Programação e Desenvolvimento de sites </option>
-        <option> Produção de Conteúdo </option>
-        <option> Gerenciamento de Redes Sociais </option>
-        <option> Atendimento Online </option>
-        <option> Criação e Organização de Ações para Arrecadamento de Verba </option>
-        <option> Financeiro </option>
-        <option> Administrativo </option>
-        <option> CED(Castração, Esterilização e Devolução) </option>
-        <option> Veterinário </option>
-        <option> Estudante de Veterinária </option>
-        <option> Lar Temporário </option>
-       </select>
-       <br>
-       <text> Caso queira ser carona, quando tem disponibilidade? </text>
-       <select>
-        <option></option>
-        <option> Dia útil em horário comercial </option>
-        <option> Final de Semana </option>
-        <option> Dia útil fora do horário comercial </option>
-       </select>
-       <br>
-       <text> Caso queira ser lar temporário, você mora em apartamento ou prédio? </text>
-       <select>
-        <option></option>
-        <option> Casa com tela de proteção </option>
-        <option> Casa sem tela de proteção </option>
-        <option> Apartamento com tela de proteção </option>
-        <option> Apartamento sem tela de proteção </option>
-       </select>
-       <br>
-       <text> Você aceita que entremos em contato via email e/ou telefone fornecido? </text>
-       <br>
-       <input type="checkbox" /> <text> Eu aceito que a Crazy Cat Gang entre em contato via email e/ou telefone fornecidos.</text>
-       <br>
-       <input type="checkbox" /> <text> Eu não aceito que a Crazy Cat Gang entre em contato via email e/ou telefone fornecidos.</text>
-       <br>
-       <br>
-       <button onclick="alert('Cadastro enviado!')"> Enviar Cadastro </button>
+        <form action="https://formspree.io/f/mrgnnovl" method="POST" class="texto"> 
+            <label> Nome completo: </label>
+            <input type="text" name="Nome completo" placeholder="Nome completo" required />
+            <br>
+            <label> Data de nascimento: </label>
+            <input type="date" name="Data de nascimento" placeholder="Data de nascimento" required />
+            <br>
+            <label> Telefone: </label>
+            <input type="text" name="Telefone" placeholder="Telefone" required />
+            <br>
+            <label> Email: </label>
+            <input type="email" name="Email" placeholder="Email" required />
+            <br>
+            <label> CPF: </label>
+            <input type="text" name="CPF" placeholder="CPF" required />
+            <br>
+            <label> Qual função te interessa? </label>
+            <select name="Função de interesse" required>
+                <option value=""> </option>
+                <option> Carona </option>
+                <option> Organização de Eventos </option>
+                <option> Participação de Eventos </option>
+                <option> Fotografia </option>
+                <option> Edição Gráfica </option>
+                <option> Edição de Vídeos </option>
+                <option> Programação e Desenvolvimento de sites </option>
+                <option> Produção de Conteúdo </option>
+                <option> Gerenciamento de Redes Sociais </option>
+                <option> Atendimento Online </option>
+                <option> Criação e Organização de Ações para Arrecadamento de Verba </option>
+                <option> Financeiro </option>
+                <option> Administrativo </option>
+                <option> CED(Castração, Esterilização e Devolução) </option>
+                <option> Veterinário </option>
+                <option> Estudante de Veterinária </option>
+                <option> Lar Temporário </option>
+            </select>
+            <br>
+            <label> Caso queira ser carona, quando tem disponibilidade? </label>
+            <select name="Disponibilidade carona">
+                <option value=""></option>
+                <option> Dia útil em horário comercial </option>
+                <option> Final de Semana </option>
+                <option> Dia útil fora do horário comercial </option>
+            </select>
+            <br>
+            <label> Caso queira ser lar temporário, você mora em apartamento ou prédio? </label>
+            <select name="Tipo de residência">
+                <option value=""></option>
+                <option> Casa com tela de proteção </option>
+                <option> Casa sem tela de proteção </option>
+                <option> Apartamento com tela de proteção </option>
+                <option> Apartamento sem tela de proteção </option>
+            </select>
+            <br>
+            <label> Você aceita que entremos em contato via email e/ou telefone fornecido? </label>
+            <br>
+            <input type="checkbox" name="Aceita contato" value="Sim" required /> <label> Eu aceito que a Crazy Cat Gang entre em contato via email e/ou telefone fornecidos.</label>
+            <br>
+            <input type="checkbox" name="Aceita contato" value="Não" /> <label> Eu não aceito que a Crazy Cat Gang entre em contato via email e/ou telefone fornecidos.</label>
+            <br>
+            <button type="submit"> Enviar Cadastro </button>
+        </form>
 
 </div>
 
