@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <script src="https://kit.fontawesome.com/ae15e43811.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2|Alegreya Sans">
@@ -8,16 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crazy Cat Gang</title>
 </head>
+
 <body>
     <header>
         <div class="header-container">
-        <div class="logo">
-            <img src="../Imagens/logo_fundo.png" alt="Logo Crazy Cat Gang">
-        </div>
-        <h1> Crazy Cat Gang </h1>
+            <div class="logo">
+                <img src="../Imagens/logo_fundo.png" alt="Logo Crazy Cat Gang">
+            </div>
+            <h1> Crazy Cat Gang </h1>
         </div>
         <nav>
-            <ul> 
+            <ul>
                 <li> <a href="index.html"> Página Inicial </a> </li>
                 <li> <a href="voluntario.html"> Quero ser voluntário </a> </li>
                 <li> <a href="ajudar.html"> Como posso ajudar </a> </li>
@@ -26,16 +28,17 @@
     </header>
 
     <div class="texto">
-    
+
         <h2> Viu um gatinho abandonado? </h2>
         <p>
             <text>
-                Caso tenha visto um gatinho abandonado, você pode reportar para a nossa equipe e tomaremos todas as medidas possíveis para resgatar e dar um novo lar para ele!
+                Caso tenha visto um gatinho abandonado, você pode reportar para a nossa equipe e tomaremos todas as
+                medidas possíveis para resgatar e dar um novo lar para ele!
             </text>
         </p>
         <p>
             <text>
-                Primeiro, nos conte um pouco mais sobre o gatinho: 
+                Primeiro, nos conte um pouco mais sobre o gatinho:
             </text>
         </p>
 
@@ -44,40 +47,49 @@
                 Caso queira, também pode nos enviar informações adicionais em nosso email!
             </text>
         </p>
-        
-        <br>
-
-        <text> Onde você viu esse gatinho? </text>
-        <input type="text" placeholder="Endereço" />
-        
-        <br>
-        <text> Envie uma foto do gatinho: </text>
-        <input type="file" id="gatinho" name="gatinho" accept="image/png, image/jpeg" />
 
         <br>
 
-        <text> Quando você viu o gatinho? </text>
-        <input type="date" />
-        
-        <br>
+        <form action="https://formspree.io/f/mdoqqpvy" method="POST" class="texto">
 
-        <text> Em que horário você viu esse gatinho? </text>
-        <input type="time" />
+            <label> Local em que viu o gatinho: </label>
+            <input type="text" name="localização" placeholder="Endereço" required />
 
-        <br>
-        <br>
-        
-        <button onclick="alert('Report enviado!\nObrigado por nos ajudar a resgatar esse gatinho!')"> Enviar report </button>
+            <br>
+            <label> Envie uma foto do gatinho: </label>
+            <input type="file" id="gatinho" name="gatinho" accept="image/png, image/jpeg" required />
+
+            <br>
+
+            <label> Data em que viu o gatinho: </label>
+            <input type="date" name="data" required />
+
+            <br>
+
+            <label> Horário em que viu o gatinho: </label>
+            <input type="time" name="horário"/>
+
+            <br>
+            <br>
+
+            <button type="submit"> Enviar report </button>
+        </form>
 
     </div>
-    
+
     <br>
 
-    <a href="mailto:ccgcwb@gmail.com"><i id="mail" class="fa-regular fa-envelope fa-2xl" style="color: #ffcb04;"></i></a>
-    <a href="https://www.instagram.com/crazycatgang/"><i id="insta" class="fa-brands fa-instagram fa-2xl" style="color: #ffcb04;"></i></a>
-    <a href="https://web.facebook.com/crazycatgang/?locale=pt_BR&_rdc=1&_rdr"><i id="face" class="fa-brands fa-facebook fa-2xl" style="color: #ffcb04;"></i></a>
-    <a href="https://www.tiktok.com/@crazycatgang"><i id="tiktok" class="fa-brands fa-tiktok fa-2xl" style="color: #ffcb04;"></i></a>
-    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcrazycatgangcwb"><i id="x" class="fa-brands fa-x-twitter fa-2xl" style="color: #ffcb04;"></i></a>
+    <a href="mailto:ccgcwb@gmail.com"><i id="mail" class="fa-regular fa-envelope fa-2xl"
+            style="color: #ffcb04;"></i></a>
+    <a href="https://www.instagram.com/crazycatgang/"><i id="insta" class="fa-brands fa-instagram fa-2xl"
+            style="color: #ffcb04;"></i></a>
+    <a href="https://web.facebook.com/crazycatgang/?locale=pt_BR&_rdc=1&_rdr"><i id="face"
+            class="fa-brands fa-facebook fa-2xl" style="color: #ffcb04;"></i></a>
+    <a href="https://www.tiktok.com/@crazycatgang"><i id="tiktok" class="fa-brands fa-tiktok fa-2xl"
+            style="color: #ffcb04;"></i></a>
+    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcrazycatgangcwb"><i id="x"
+            class="fa-brands fa-x-twitter fa-2xl" style="color: #ffcb04;"></i></a>
 
 </body>
+
 </html>
