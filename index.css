@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+
+body {
+    text-align: center;
+    justify-content: center;
+    font-family: "Algebreya Sans", Sans-serif;
+    font-size: 18px;
+    background-color: #F5F5F5;
+    color: #333333;
+    
+}
+
+.botao {
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    left: +1700px;
+}
+
+.modoNoturno{
+    background-color: #333333;
+    color: #F5F5F5;
+}
+
+header {
+    font-family: "Exo 2", sans-serif;
+    color: 333333;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid 2px #F9C505;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    font-size: 1.5em;
+    margin: 0 15px;
+}
+
+a {
+    font-family: "Exo 2", sans-serif;
+    color: #F9C505;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F5A623;
+    cursor: pointer;
+}
+
+.texto {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    text-align: start;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; 
+}
+
+#banner {
+    width: 100%;
+    max-width: 1500px; 
+    height: auto;
+    border-radius: 5em;
+}
+
+#apresentacao {
+    text-align: center;
+    justify-content: center;
+    display: contents;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px;
+}
+
+#formulario {
+    display: none;
+    animation: fadeIn 1s ease-out;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+.campo {
+    margin: 15px 0;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing:border-box;
+
+}
+
+input[type="radio"] {
+    display: inline;
+    margin-right: 10px;
+  }
+
+button {
+    background-color: #F9C505;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #F5A623;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #apresentacao, #formulario {
+        width: 90%;
+    }
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;  
+    gap: 50px;
+}
+
+#gatos {
+    width: 250px; 
+    height: 150px;
+    border-radius: 100%; 
+    margin: 15px;
+}
+
+figcaption {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
