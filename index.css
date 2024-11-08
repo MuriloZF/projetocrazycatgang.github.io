@@ -1,20 +1,40 @@
-body {
-    font-family: "Alegreya Sans", Sans-serif;
-    background-color: black;
-    color: white;
+/* CONFIGURAÇÕES GERAIS */
+* {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
+
+body {
+    font-family: "Algebreya Sans", Sans-serif;
+    font-size: 18px;
+    background-color: #F5F5F5;
+    color: #333333;
+}
+
+.button {
+    width: 80px;
+    height: 40px;
+    border: 5px solid #333333;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+}
+
+.modoNoturno{
+    background-color: #333333;
+    color: #F5F5F5;
+}
+/* CONFIGURAÇÕES DO CABEÇALHO */
 header {
     font-family: "Exo 2", sans-serif;
-    color: white;
+    color: 333333;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: solid 2px #ffcb04;
+    border-bottom: solid 2px #F9C505;
 }
 
 header h1 {
@@ -34,7 +54,7 @@ header h1 {
 .logo img {
     height: 100px;
     width: auto;
-    border-radius: 20px;
+    border-radius: 50%;
 }
 
 nav ul {
@@ -52,20 +72,34 @@ nav ul li {
 
 a {
     font-family: "Exo 2", sans-serif;
-    color: white;
+    color: #F9C505;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ffcb04;
+    color: #777777;
     cursor: pointer;
 }
 
-#banner {
-    border-radius: 50px;
+.texto {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.texto {
-    font-family: "Alegreya Sans", sans-serif;
-    font-size: 1.5em;
+p {
+    text-align: start;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; 
+}
+
+#banner {
+    width: 100%;
+    max-width: 1500px; 
+    height: auto;
+    border-radius: 5em;
 }
