@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="image/x-icon" href="../Imagens/logo_fundo.png">
+    <script src="https://kit.fontawesome.com/ae15e43811.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2|Alegreya Sans">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Voluntário - Crazy Cat Gang</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../Imagens/logo_fundo.png" alt="Logo Crazy Cat Gang">
+            </div>
+            <div class="botao">
+                <button id="ModoNoturno" onclick="modoNoturno()">Modo Escuro</button>
+            </div>
+            <h1>Crazy Cat Gang</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="voluntario.html">Quero ser voluntário</a></li>
+                <li><a href="ajudar.html">Como posso ajudar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    <div id="apresentacao">
+        <h2>Falta pouco para você ser um voluntário da Crazy Cat Gang!</h2>
+        <h3>Primeiro, nos conte um pouco sobre você:</h3>
+        <button onclick="iniciarFormulario()">Iniciar Cadastro</button>
+    </div>
+
+    <div id="formulario" class="formulario oculto">
+        <form id="form" onsubmit="submitForm(event)">
+            <div class="campo">
+                <label>Nome completo:</label>
+                <input type="text" name="Nome_completo" placeholder="Nome Completo" required />
+            </div>
+            <div class="campo">
+                <label>Data de nascimento:</label>
+                <input type="date" name="Data_de_nascimento" placeholder="Data de nascimento" required />
+            </div>
+            <div class="campo">
+                <label>Telefone:</label>
+                <input type="tel" name="telefone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Telefone" required>
+            </div>
+            <div class="campo">
+                <label>Email:</label>
+                <input type="email" name="Email" placeholder="Email" required />
+            </div>
+            <div class="campo">
+                <label>CPF:</label>
+                <input type="text" name="CPF" placeholder="CPF" required />
+            </div>
+            <div class="campo">
+                <label>Qual função te interessa?</label>
+                <select name="Função_de_interesse" required>
+                    <option value="">Selecione uma opção</option>
+                    <option>Carona</option>
+                    <option>Organização de Eventos</option>
+                    <option>Participação de Eventos</option>
+                    <option>Fotografia</option>
+                    <option>Edição Gráfica</option>
+                    <option>Edição de Vídeos</option>
+                    <option>Programação e Desenvolvimento de sites</option>
+                    <option>Produção de Conteúdo</option>
+                    <option>Gerenciamento de Redes Sociais</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label>Onde você mora?</label>
+                <input type="text" name="local" placeholder="Endereço Completo" required />
+            </div>
+            <div class="campo">
+                <label>Como conheceu o projeto?</label>
+                <textarea name="como_conheceu" placeholder="Como conheceu o projeto?" required></textarea>
+            </div>
+            <div class="campo">
+                <label>Como podemos entrar em contato?</label>
+                <input type="radio" name="aceite" value="sim" checked> Sim
+                <input type="radio" name="aceite" value="nao"> Não
+            </div>
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+    </div>
+
+    <br><br>
+
+    <a href="mailto:ccgcwb@gmail.com"><i id="mail" class="fa-regular fa-envelope fa-2xl" style="color: #ffcb04;"></i></a>
+    <a href="https://www.instagram.com/crazycatgang/"><i id="insta" class="fa-brands fa-instagram fa-2xl" style="color: #ffcb04;"></i></a>
+    <a href="https://web.facebook.com/crazycatgang/?locale=pt_BR&_rdc=1&_rdr"><i id="face" class="fa-brands fa-facebook fa-2xl" style="color: #ffcb04;"></i></a>
+    <a href="https://www.tiktok.com/@crazycatgang"><i id="tiktok" class="fa-brands fa-tiktok fa-2xl" style="color: #ffcb04;"></i></a>
+    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcrazycatgangcwb"><i id="x" class="fa-brands fa-x-twitter fa-2xl" style="color: #ffcb04;"></i></a>
+
+    <script>
+        // Function to submit the form asynchronously
+        async function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(document.getElementById('form'));
+
+            try {
+                const response = await fetch('submit.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert('Cadastro enviado com sucesso!');
+                    document.getElementById('form').reset(); // Reset the form
+                } else {
+                    alert('Erro ao enviar o cadastro. Tente novamente.');
+                }
+            } catch (error) {
+                console.error('Error submitting the form:', error);
+                alert('Erro ao enviar o cadastro. Tente novamente.');
+            }
+        }
+    </script>
+</body>
+</html>
