@@ -3,7 +3,7 @@
 $host = 'localhost'; // Your database host
 $db = 'crazycatgang'; // Your database name
 $user = 'root'; // Your database username
-$pass = 'Newhuss2020'; // Your database password
+$pass = 'PUC@1234'; // Your database password
 
 // Create a connection to MySQL
 $conn = new mysqli($host, $user, $pass, $db);
@@ -14,14 +14,18 @@ if ($conn->connect_error) {
 }
 
 // Handle form submission for volunteers
-if (isset($_POST['Nome completo'])) {
-    $name = $conn->real_escape_string($_POST['Nome completo']);
+if (isset($_POST['Nome_completo'])) {
+    $name = $conn->real_escape_string($_POST['Nome_completo']);
+    $data_nasc = $conn->real_escape_string($_POST['Data_de_nascimento']);
+    $phone = $conn->real_escape_string($_POST['telefone']);
     $email = $conn->real_escape_string($_POST['Email']);
-    $phone = $conn->real_escape_string($_POST['Telefone']);
-    $created_at = date('Y-m-d H:i:s');
-
+    $cpf = $conn->real_escape_string($_POST['CPF']);
+    $funcao = $conn->real_escape_string($_POST['Função_de_interesse']);
+    $disponibilidade = $conn->real_escape_string($_POST['Disponibilidade_carona']);
+    $residencia = $conn->real_escape_string($_POST['Tipo_de_residência']);
+    
     // Insert volunteer data into the database
-    $sql = "INSERT INTO volunteers (name, email, phone, created_at) VALUES ('$name', '$email', '$phone', '$created_at')";
+    $sql = "INSERT INTO volunteers (nome, data_nascimento, telefone, email, cpf, funcao, disponibilidade, moradia_temp) VALUES ('$name', '$data_nasc', '$phone', '$email', '$cpf', '$funcao', '$disponibilidade', '$residencia')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Volunteer registration successful.";
@@ -31,15 +35,13 @@ if (isset($_POST['Nome completo'])) {
 }
 
 // Handle form submission for cat reports
-if (isset($_POST['localização'])) {
-    $location = $conn->real_escape_string($_POST['localização']);
-    $cat_description = $conn->real_escape_string($_POST['gatinho']); // Assuming you want to get some description from the file input
-    $reporter_email = $conn->real_escape_string($_POST['email']); // Assuming you have an email field in your report form
-    $reporter_phone = $conn->real_escape_string($_POST['horário']); // Assuming you want to get the time from the form
-    $created_at = date('Y-m-d H:i:s');
-
+if (isset($_POST['Nome_completo2'])) {
+    $name = $conn->real_escape_string($_POST['Nome_completo2']);
+    $phone = $conn->real_escape_string($_POST['telefone2']);
+    $adress = $name = $conn->real_escape_string($_POST['Endereço']); // Assuming you want to get some description from the file input
+    $info = $conn->real_escape_string($_POST['Informacoes']); // Assuming you have an email field in your report form
     // Insert report data into the database
-    $sql = "INSERT INTO reports (cat_description, location, reporter_email, reporter_phone, created_at) VALUES ('$cat_description', '$location', '$reporter_email', '$reporter_phone', '$created_at')";
+    $sql = "INSERT INTO reports (nome, telefone, endereco) VALUES ('$name', '$phone', '$adress')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Report submitted successfully.";
